@@ -11,12 +11,15 @@ export default defineConfig({
     supportFile: 'cypress/support/index.js',
     supportFolder: 'cypress/support',
     fixturesFolder: 'cypress/fixtures',
-    specPattern: 'cypress/e2e/**.cy.tsx',
+    specPattern: 'src/cypress/e2e/**.cy.tsx',
   },
   env: {
     codeCoverageTasksRegistered: true,
     codeCoverage: {
-      exclude: ["src/reportWebVitals.ts"]
+      exclude: ["cypress", "src/cypress", "src/reportWebVitals.ts"]
+    },
+    nyc: {
+      exclude: ["cypress", "src/cypress", "src/reportWebVitals.ts"]
     }
   },
   component: {

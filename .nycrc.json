@@ -1,0 +1,4 @@
+{
+  "exclude": ["cypress", "src/cypress", "src/reportWebVitals.ts"],
+  "excludeAfterRemap": true
+}
